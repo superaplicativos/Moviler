@@ -1,0 +1,15 @@
+<!-- /super-admin/src/views/settings.ejs -->
+
+<h1>Configurações Globais</h1>
+<form action="/settings/update" method="POST">
+    <label>Nome do Aplicativo</label>
+    <input type="text" name="appName" value="<%= settings.appName %>" />
+
+    <label>Moeda Padrão</label>
+    <input type="text" name="currency" value="<%= settings.currency %>" />
+
+    <label>Comissão Padrão (%)</label>
+    <input type="text" name="defaultCommission" value="<%= settings.defaultCommission %>" />
+
+    <button type="submit">Salvar Configurações</button>
+</form>

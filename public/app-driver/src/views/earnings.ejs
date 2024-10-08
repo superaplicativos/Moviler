@@ -1,0 +1,37 @@
+<!-- /app-driver/src/views/earnings.ejs -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seus Ganhos</title>
+    <link rel="stylesheet" href="/assets/css/earnings.css">
+</head>
+<body>
+    <header>
+        <h1>Seus Ganhos</h1>
+    </header>
+
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Valor</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% earnings.forEach(earning => { %>
+                    <tr>
+                        <td><%= earning.date %></td>
+                        <td><%= earning.amount %></td>
+                        <td><%= earning.status %></td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>

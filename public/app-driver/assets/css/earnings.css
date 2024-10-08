@@ -1,0 +1,34 @@
+/* /app-driver/assets/css/earnings.css */
+
+.earnings {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.earnings h1 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.earnings table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.earnings th,
+.earnings td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+.earnings th {
+    background-color: #005599;
+    color: white;
+}
+
+.earnings tr:hover {
+    background-color: #f1f1f1;
+}

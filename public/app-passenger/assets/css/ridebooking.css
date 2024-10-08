@@ -1,0 +1,42 @@
+/* /app-passenger/assets/css/ridebooking.css */
+
+.ride-booking {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.ride-booking h1 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.ride-booking label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.ride-booking input,
+.ride-booking select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.ride-booking button {
+    background-color: #00796b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.ride-booking button:hover {
+    background-color: #004d40;
+}

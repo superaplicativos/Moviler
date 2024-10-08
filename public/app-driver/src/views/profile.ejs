@@ -1,0 +1,28 @@
+<!-- /app-driver/src/views/profile.ejs -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil - App Motorista</title>
+    <link rel="stylesheet" href="/assets/css/profile.css">
+</head>
+<body>
+    <header>
+        <h1>Perfil do Motorista</h1>
+    </header>
+
+    <main>
+        <form action="/profile/update" method="POST">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" value="<%= profile.name %>" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" value="<%= profile.email %>" required>
+
+            <button type="submit">Atualizar Perfil</button>
+        </form>
+    </main>
+</body>
+</html>

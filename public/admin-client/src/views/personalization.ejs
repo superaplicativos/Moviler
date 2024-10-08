@@ -1,0 +1,15 @@
+<!-- /admin-client/src/views/personalization.ejs -->
+
+<h1>Personalização do Aplicativo</h1>
+<form action="/personalization/update" method="POST">
+    <label>Logotipo</label>
+    <input type="text" name="logo" value="<%= personalizationSettings.logo %>" />
+
+    <label>Cor Primária</label>
+    <input type="color" name="primaryColor" value="<%= personalizationSettings.primaryColor %>" />
+
+    <label>Cor Secundária</label>
+    <input type="color" name="secondaryColor" value="<%= personalizationSettings.secondaryColor %>" />
+
+    <button type="submit">Salvar Personalização</button>
+</form>

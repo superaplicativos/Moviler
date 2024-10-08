@@ -1,0 +1,225 @@
+/public
+    index.html                    # Página principal do site (landing page)
+    /assets/
+        /css/
+            main.css              # Arquivo CSS principal para o site inicial
+            navbar.css            # Estilo para o navbar
+            dashboard.css         # Estilo para o dashboard
+            clients.css           # Estilo para a página de clientes
+            forms.css             # Estilo global para formulários
+        /js/
+            main.js               # Script JS principal para o site inicial
+            interactions.js       # Script para interações gerais
+        /images/
+            logo.png              # Logo do sistema
+            background.jpg        # Imagem de fundo para o site
+
+    /super-admin/
+        index.js                  # Inicialização do painel Super Admin
+        /assets/
+            /css/
+                superadmin.css    # Estilos gerais para o painel Super Admin
+                dashboard.css     # Estilo específico para o dashboard
+                clients.css       # Estilo específico para a gestão de clientes
+            /js/
+                superadmin.js     # Script geral do painel Super Admin
+        /src
+            /components
+                Dashboard.js                     # Componente do Dashboard
+                ClientManagement.js              # Tabela de clientes
+                RideOverview.js                  # Visualização de corridas
+                PaymentTable.js                  # Tabela de pagamentos
+                Settings.js                      # Tela de configurações globais
+                CommissionSettings.js            # Configuração de comissões
+                Navbar.js                        # Componente da Navbar
+            /controllers
+                GlobalDashboardController.js     # Controlador do dashboard
+                ClientManagementController.js    # Controlador de clientes
+                RideOverviewController.js        # Controlador de corridas
+                PaymentController.js             # Controlador de pagamentos
+                CommissionController.js          # Controlador de comissões
+            /models
+                GlobalDashboard.js               # Modelo do dashboard
+                Client.js                        # Modelo de cliente
+                Ride.js                          # Modelo de corrida
+                Payment.js                       # Modelo de pagamento
+            /views
+                global_dashboard.ejs             # View do dashboard global
+                clients.ejs                      # View da página de clientes
+                ride_overview.ejs                # View da página de corridas
+                payments.ejs                     # View da página de pagamentos
+                settings.ejs                     # View da página de configurações
+            /services
+                ApiService.js                    # Serviço de comunicação com a API
+                NotificationService.js           # Serviço de notificações
+            /helpers
+                AuthHelper.js                    # Auxiliar de autenticação
+                SessionHelper.js                 # Auxiliar de sessões
+            config.js                            # Configurações do painel Super Admin
+            routes.js                            # Definição de rotas para o painel Super Admin
+
+    /admin-client/
+        index.js                   # Inicialização do painel do Cliente Dono do App
+        /assets/
+            /css/
+                adminclient.css    # Estilos gerais para o painel do cliente
+                drivers.css        # Estilo para a página de motoristas
+                rides.css          # Estilo para a página de corridas
+                payments.css       # Estilo para a página de pagamentos
+            /js/
+                adminclient.js     # Script geral do painel do cliente
+        /src
+            /components
+                Dashboard.js                     # Dashboard do cliente
+                DriverManagement.js              # Tabela de motoristas
+                RideManagement.js                # Tabela de corridas
+                PaymentSettings.js               # Configurações de pagamento
+                Personalization.js               # Personalização (logo, cores)
+                Support.js                       # Tela de suporte
+                Documentation.js                 # Tela de FAQs e documentação
+                Navbar.js                        # Componente de navegação
+            /controllers
+                DashboardController.js           # Controlador do dashboard
+                DriverController.js              # Controlador de motoristas
+                RideController.js                # Controlador de corridas
+                PaymentController.js             # Controlador de pagamentos
+                CommissionController.js          # Controlador de comissões
+                RegionController.js              # Controlador de regiões
+                TariffController.js              # Controlador de tarifas
+                PersonalizationController.js     # Controlador de personalização
+            /models
+                Dashboard.js                     # Modelo de dashboard
+                Driver.js                        # Modelo de motorista
+                Ride.js                          # Modelo de corrida
+                Payment.js                       # Modelo de pagamento
+                Commission.js                    # Modelo de comissão
+                Region.js                        # Modelo de região
+                Tariff.js                        # Modelo de tarifas
+            /views
+                dashboard.ejs                    # View do dashboard do cliente
+                drivers.ejs                      # View da página de motoristas
+                rides.ejs                        # View da página de corridas
+                payments.ejs                     # View da página de pagamentos
+                commissions.ejs                  # View da página de comissões
+                personalization.ejs              # View da página de personalização
+                support.ejs                      # View da página de suporte
+                documentation.ejs                # View da página de FAQs
+            /services
+                ApiService.js                    # Serviço de comunicação com a API
+                MapService.js                    # Serviço de integração com mapas (Google/Mapbox)
+                PaymentService.js                # Serviço de integração com Stripe
+            /helpers
+                AuthHelper.js                    # Auxiliar de autenticação
+                SessionHelper.js                 # Auxiliar de sessões
+            config.js                            # Configurações do painel do cliente
+            routes.js                            # Definição de rotas para o painel do cliente
+
+    /app-passenger/
+        index.js                   # Inicialização do PWA do passageiro
+        /assets/
+            /css/
+                passenger.css      # Estilos gerais para o app do passageiro
+                ridebooking.css    # Estilo para a tela de agendamento de corridas
+                ridehistory.css    # Estilo para a tela de histórico de corridas
+                profile.css        # Estilo para a tela de perfil do passageiro
+                paymentmethods.css # Estilo para a tela de métodos de pagamento
+            /js/
+                passenger.js       # Script geral do PWA do passageiro
+        /src
+            /components
+                RideBooking.js                   # Tela de agendamento de corridas
+                RideHistory.js                   # Tela de histórico de corridas
+                PaymentMethods.js                # Tela para gerenciar métodos de pagamento
+                Profile.js                       # Tela de perfil do passageiro
+                SosButton.js                     # Botão de emergência
+                Navbar.js                        # Componente de navegação do app passageiro
+            /controllers
+                RideController.js                # Controlador de corridas
+                PaymentController.js             # Controlador de pagamentos
+                UserController.js                # Controlador de perfil do passageiro
+            /models
+                Ride.js                          # Modelo de corrida do passageiro
+                Payment.js                       # Modelo de pagamento
+                User.js                          # Modelo de perfil do passageiro
+            /views
+                home.ejs                         # Página inicial do app do passageiro
+                profile.ejs                      # Página de perfil do passageiro
+                ride_history.ejs                 # Página de histórico de corridas
+                ride_booking.ejs                 # Página de agendamento de corridas
+                payment_methods.ejs              # Página de métodos de pagamento
+            /services
+                ApiService.js                    # Serviço de comunicação com a API
+                MapService.js                    # Serviço de integração com mapas
+                PaymentService.js                # Serviço de integração com Stripe
+            /helpers
+                AuthHelper.js                    # Auxiliar de autenticação
+                SessionHelper.js                 # Auxiliar de sessões
+            config.js                            # Configurações do app passageiro
+            routes.js                            # Definição de rotas do app passageiro
+
+    /app-driver/
+        index.js                   # Inicialização do PWA do motorista
+        /assets/
+            /css/
+                driver.css         # Estilos gerais para o app do motorista
+                riderequest.css    # Estilo para a tela de solicitações de corridas
+                ridehistory.css    # Estilo para a tela de histórico de corridas
+                earnings.css       # Estilo para a tela de ganhos do motorista
+                profile.css        # Estilo para a tela de perfil do motorista
+            /js/
+                driver.js          # Script geral do PWA do motorista
+        /src
+            /components
+                RideRequest.js                   # Tela de solicitações de corridas
+                RideHistory.js                   # Tela de histórico de corridas do motorista
+                Earnings.js                      # Tela de ganhos do motorista
+                Profile.js                       # Tela de perfil do motorista
+                Navbar.js                        # Componente de navegação do app motorista
+            /controllers
+                RideController.js                # Controlador de corridas
+                EarningsController.js            # Controlador de ganhos
+                UserController.js                # Controlador de perfil do motorista
+            /models
+                Ride.js                          # Modelo de corrida do motorista
+                Earnings.js                      # Modelo de ganhos do motorista
+                User.js                          # Modelo de perfil do motorista
+            /views
+                home.ejs                         # Página inicial do app do motorista
+                profile.ejs                      # Página de perfil do motorista
+                ride_request.ejs                 # Página de solicitações de corridas
+                ride_history.ejs                 # Página de histórico de corridas
+                earnings.ejs                     # Página de ganhos do motorista
+            /services
+                ApiService.js                    # Serviço de comunicação com a API
+                MapService.js                    # Serviço de integração com mapas
+                PaymentService.js                # Serviço de integração com Stripe
+            /helpers
+                AuthHelper.js                    # Auxiliar de autenticação
+                SessionHelper.js                 # Auxiliar de sessões
+            config.js                            # Configurações do app motorista
+            routes.js                            # Definição de rotas do app motorista
+
+    /api-gateway/
+        /src
+            /controllers
+                AuthController.js                # Autenticação e autorização
+                PaymentController.js             # Controle de pagamentos
+                RideController.js                # Controle de corridas
+                DriverController.js              # Controle de motoristas
+                NotificationController.js        # Envio de notificações
+            /services
+                StripeService.js                 # Integração com Stripe para pagamentos
+                MapService.js                    # Integração com mapas
+                RideService.js                   # Lógica de gestão de corridas
+                UserService.js                   # Lógica de gestão de usuários
+                DriverService.js                 # Lógica de gestão de motoristas
+            /routes
+                authRoutes.js                    # Rotas de autenticação
+                paymentRoutes.js                 # Rotas de pagamentos
+                rideRoutes.js                    # Rotas de corridas
+                driverRoutes.js                  # Rotas de motoristas
+            app.js                               # Inicialização da aplicação
+            server.js                            # Configuração do servidor
+
+    config.js                      # Configurações globais
+    routes.js                      # Definição de rotas globais

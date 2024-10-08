@@ -1,0 +1,38 @@
+<!-- /admin-client/src/views/payments.ejs -->
+
+<h1>Configurações de Pagamento</h1>
+<div class="payments-settings">
+    <form action="/payments/update" method="POST">
+        <label>Chave API Stripe</label>
+        <input type="text" name="stripeKey" value="<%= paymentSettings.stripeKey %>" />
+
+        <label>Comissão (%)</label>
+        <input type="text" name="commission" value="<%= paymentSettings.commission %>" />
+
+        <button type="submit">Salvar Configurações</button>
+    </form>
+</div>
+
+<h2>Transações Recentes</h2>
+<table class="payments-table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Valor</th>
+            <th>Método</th>
+            <th>Status</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% payments.forEach(payment => { %>
+            <tr>
+                <td><%= payment.id %></td>
+                <td><%= payment.amount %></td>
+                <td><%= payment.method %></td>
+                <td><%= payment.status %></td>
+                <td><a href="/payments/<%= payment.id %>">Ver Detalhes</a></td>
+            </tr>
+        <% }) %>
+    </tbody>
+</table>

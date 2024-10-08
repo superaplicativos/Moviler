@@ -1,0 +1,36 @@
+/* assets/css/clients.css */
+.clients-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #fff;
+}
+
+.clients-table th,
+.clients-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.clients-table th {
+    background-color: #3f51b5;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.clients-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.clients-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.clients-header h1 {
+    font-size: 2rem;
+    color: #333;
+}

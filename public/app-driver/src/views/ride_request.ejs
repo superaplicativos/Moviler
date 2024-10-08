@@ -1,0 +1,36 @@
+<!-- /app-driver/src/views/ride_request.ejs -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitações de Corridas</title>
+    <link rel="stylesheet" href="/assets/css/riderequest.css">
+</head>
+<body>
+    <header>
+        <h1>Solicitações de Corridas</h1>
+    </header>
+
+    <main>
+        <div class="ride-requests">
+            <% rideRequests.forEach(ride => { %>
+                <div>
+                    <p>Partida: <%= ride.pickup %></p>
+                    <p>Destino: <%= ride.destination %></p>
+                    <p>Tipo: <%= ride.type %></p>
+                    <form action="/ride-accept" method="POST">
+                        <input type="hidden" name="rideId" value="<%= ride.id %>">
+                        <button type="submit">Aceitar</button>
+                    </form>
+                    <form action="/ride-decline" method="POST">
+                        <input type="hidden" name="rideId" value="<%= ride.id %>">
+                        <button type="submit">Recusar</button>
+                    </form>
+                </div>
+            <% }) %>
+        </div>
+    </main>
+</body>
+</html>

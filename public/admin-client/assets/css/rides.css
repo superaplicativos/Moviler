@@ -1,0 +1,25 @@
+/* /admin-client/assets/css/rides.css */
+
+.rides-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.rides-table th,
+.rides-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.rides-table th {
+    background-color: #00796b;
+    color: white;
+}
+
+.rides-table tr:hover {
+    background-color: #f1f1f1;
+}

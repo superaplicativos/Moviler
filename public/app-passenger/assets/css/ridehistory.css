@@ -1,0 +1,34 @@
+/* /app-passenger/assets/css/ridehistory.css */
+
+.ride-history {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ride-history h1 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.ride-history table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.ride-history th,
+.ride-history td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+.ride-history th {
+    background-color: #00796b;
+    color: white;
+}
+
+.ride-history tr:hover {
+    background-color: #f1f1f1;
+}

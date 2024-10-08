@@ -1,0 +1,49 @@
+/* /super-admin/assets/css/clients.css */
+
+.clients-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.clients-table th,
+.clients-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.clients-table th {
+    background-color: #3f51b5;
+    color: white;
+}
+
+.clients-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.clients-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.clients-header h1 {
+    font-size: 2rem;
+    color: #333;
+}
+
+.add-client-btn {
+    background-color: #3f51b5;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.add-client-btn:hover {
+    background-color: #2c3e50;
+}

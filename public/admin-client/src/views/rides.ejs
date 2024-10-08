@@ -1,0 +1,25 @@
+<!-- /admin-client/src/views/rides.ejs -->
+
+<h1>Gestão de Corridas</h1>
+<table class="rides-table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Motorista</th>
+            <th>Passageiro</th>
+            <th>Status</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% rides.forEach(ride => { %>
+            <tr>
+                <td><%= ride.id %></td>
+                <td><%= ride.driver %></td>
+                <td><%= ride.passenger %></td>
+                <td><%= ride.status %></td>
+                <td><a href="/rides/<%= ride.id %>">Ver Detalhes</a></td>
+            </tr>
+        <% }) %>
+    </tbody>
+</table>

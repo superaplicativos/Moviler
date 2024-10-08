@@ -1,0 +1,27 @@
+<!-- /admin-client/src/views/drivers.ejs -->
+
+<h1>Gestão de Motoristas</h1>
+<div class="drivers-header">
+    <h2>Lista de Motoristas</h2>
+    <a href="#" class="add-driver-btn">Adicionar Motorista</a>
+</div>
+<table class="drivers-table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Status</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% drivers.forEach(driver => { %>
+            <tr>
+                <td><%= driver.id %></td>
+                <td><%= driver.name %></td>
+                <td><%= driver.status %></td>
+                <td><a href="/drivers/<%= driver.id %>">Ver Detalhes</a></td>
+            </tr>
+        <% }) %>
+    </tbody>
+</table>

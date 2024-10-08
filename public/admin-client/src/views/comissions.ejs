@@ -1,0 +1,9 @@
+<!-- /admin-client/src/views/commissions.ejs -->
+
+<h1>Configuração de Comissões</h1>
+<form action="/commissions/update" method="POST">
+    <label>Comissão Padrão (%)</label>
+    <input type="text" name="commissionPercentage" value="<%= commissionSettings.commissionPercentage %>" />
+
+    <button type="submit">Salvar Configurações</button>
+</form>

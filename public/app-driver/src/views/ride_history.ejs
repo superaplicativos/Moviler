@@ -1,0 +1,39 @@
+<!-- /app-driver/src/views/ride_history.ejs -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histórico de Corridas</title>
+    <link rel="stylesheet" href="/assets/css/ridehistory.css">
+</head>
+<body>
+    <header>
+        <h1>Histórico de Corridas</h1>
+    </header>
+
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Passageiro</th>
+                    <th>Data</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% rideHistory.forEach(ride => { %>
+                    <tr>
+                        <td><%= ride.id %></td>
+                        <td><%= ride.passenger %></td>
+                        <td><%= ride.date %></td>
+                        <td><%= ride.status %></td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>

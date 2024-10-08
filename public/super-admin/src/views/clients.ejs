@@ -1,0 +1,27 @@
+<!-- /super-admin/src/views/clients.ejs -->
+
+<h1>Gestão de Clientes</h1>
+<div class="clients-header">
+    <h2>Lista de Clientes</h2>
+    <a href="#" class="add-client-btn">Adicionar Cliente</a>
+</div>
+<table class="clients-table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Status</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% clients.forEach(client => { %>
+            <tr>
+                <td><%= client.id %></td>
+                <td><%= client.name %></td>
+                <td><%= client.status %></td>
+                <td><a href="#">Ver Detalhes</a></td>
+            </tr>
+        <% }) %>
+    </tbody>
+</table>

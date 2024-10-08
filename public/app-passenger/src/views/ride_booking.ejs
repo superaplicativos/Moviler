@@ -1,0 +1,35 @@
+<!-- /app-passenger/src/views/ride_booking.ejs -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar Corrida</title>
+    <link rel="stylesheet" href="/assets/css/ridebooking.css">
+</head>
+<body>
+    <header>
+        <h1>Agendar Corrida</h1>
+    </header>
+
+    <main>
+        <form action="/ride-booking" method="POST">
+            <label for="pickup">Ponto de Partida:</label>
+            <input type="text" id="pickup" name="pickup" required>
+
+            <label for="destination">Destino:</label>
+            <input type="text" id="destination" name="destination" required>
+
+            <label for="rideType">Tipo de Corrida:</label>
+            <select id="rideType" name="rideType">
+                <option value="standard">Padrão</option>
+                <option value="premium">Premium</option>
+                <option value="moto">Moto</option>
+            </select>
+
+            <button type="submit">Agendar Corrida</button>
+        </form>
+    </main>
+</body>
+</html>
